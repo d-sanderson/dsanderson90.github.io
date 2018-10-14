@@ -5,36 +5,6 @@
 .Week1Reflection {
 	text-align: left;
 	font-family: "sans-serif";
+	margin: auto;
 
-}
- .balls {
-	 border-radius: 50%;
-	 position: fixed;
-	 width: 50px;
-	 height: 50px;
-	 top: 60%;
-	 animation-name: jump;
-	 animation-duration: 2s;
-	 animation-iteration-count: infinite;
- }
-#red {
-	background: darkviolet;
-	left: 25%;
-	animation-timing-function: linear;
-}
-#blue {
-	background: blue;
-	left: 50%;
-	animation-timing-function: ease-out;
-}
-#green {
-	background: palevioletred;
-	left: 75%;
-	animation-timing-function: cubic-bezier(0.69, 0.1, 1, 0.1);
-}
-
-@keyframes jump {
-	50% {
-		top: 10%;
-	}
 }
