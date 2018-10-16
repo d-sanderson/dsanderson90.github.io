@@ -1,4 +1,4 @@
-window.onload = myPageGreeter();
+
 
 function myPageGreeter() {
 	var person;
