@@ -23,3 +23,8 @@ img {
 	height: 300px;
 	width: 800px;
 }
+
+.visuals {
+	display: flex;
+	flex-direction: row-reverse;
+}
