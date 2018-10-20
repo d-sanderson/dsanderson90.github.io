@@ -15,11 +15,11 @@ img {
 }
 
 .portrait {
-	height: 80px;
-	width: 30px;
+	height: 800px;
+	width: 300px;
 }
 
 .landscape {
-	height: 30px;
-	width: 80px;
+	height: 300px;
+	width: 800px;
 }
