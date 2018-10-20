@@ -8,3 +8,8 @@
 	margin: auto;
 
 }
+
+#visuals {
+	display: flex;
+	flex-direction: row;
+}
