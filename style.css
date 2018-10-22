@@ -25,6 +25,6 @@ img {
 }
 
 .visuals {
-	display: flex;
-	flex-direction: row-reverse;
+	display: inline;
+
 }
