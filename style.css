@@ -25,6 +25,7 @@ img {
 }
 
 .visuals {
-	display: inline;
+	display: flex;
+	flex-direction: row;
 
 }
