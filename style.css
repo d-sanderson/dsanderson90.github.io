@@ -23,7 +23,7 @@ body {
 
 img {
 	max-width: 100%;
-	display: block;
+	display: inline-flex;
 	height: auto;
 	margin: auto;
 }
@@ -36,11 +36,4 @@ img {
 .landscape {
 	height: 300px;
 	width: 800px;
-}
-
-.visuals {
-	display: flex;
-	flex-direction: row;
-	height: 50%;
-
 }
