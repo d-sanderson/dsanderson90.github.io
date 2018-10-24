@@ -21,10 +21,9 @@ body {
 
 }
 
-img {
-	max-width: 50%;
-	max-height: 50%;
-	display: inline;
-	height: auto;
-	margin: auto;
+
+.portrait, .landscape {
+	width: 50%;
+	float: left;
+	text-align: center;
 }
