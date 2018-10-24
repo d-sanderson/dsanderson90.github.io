@@ -26,12 +26,6 @@ body {
 	padding: 5px;
 	margin: 5px;
 }
-img {
-	max-width: 100%;
-	display: block;
-	height: auto;
-	margin: auto;
-}
 
 .portrait {
 	height: 800px;
