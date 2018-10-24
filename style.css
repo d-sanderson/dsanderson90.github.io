@@ -14,7 +14,10 @@ body {
 	margin: auto;
 
 }
-
+.visuals {
+	display: inline;
+	height: 50%;
+}
 img {
 	max-width: 100%;
 	display: block;
