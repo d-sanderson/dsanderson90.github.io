@@ -22,7 +22,7 @@ body {
 }
 
 
-.portrait, .landscape {
+img {
 	width: 50%;
 	float: left;
 	text-align: center;
