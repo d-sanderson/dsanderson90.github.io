@@ -20,11 +20,12 @@ body {
 	margin: auto;
 
 }
-.visuals {
-	display: inline;
-	height: 50%;
-	padding: 5px;
-	margin: 5px;
+
+img {
+	max-width: 100%;
+	display: block;
+	height: auto;
+	margin: auto;
 }
 
 .portrait {
