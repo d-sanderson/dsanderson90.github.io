@@ -23,11 +23,11 @@ body {
 }
 
 
-img {
+/* img {
 	width: 50%;
 	float: left;
 	text-align: center;
-}
+} */
 
 .portrait, .landscape {
 	width: calc(100%/ 2- 5px);
