@@ -28,13 +28,3 @@ img {
 	height: auto;
 	margin: auto;
 }
-
-.portrait {
-	height: 800px;
-	width: 300px;
-}
-
-.landscape {
-	height: 300px;
-	width: 800px;
-}
