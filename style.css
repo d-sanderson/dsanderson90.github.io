@@ -21,16 +21,8 @@ body {
 
 }
 
-.portrait {
+img {
 	height: 80px;
 	width: 30px;
 	display: inline;
 }
-
-.landscape {
-	height: 80px;
-	width: 30px;
-	display: inline;
-}
-
-
