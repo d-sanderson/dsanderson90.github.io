@@ -1,13 +1,13 @@
 body {
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	box-sizing: border-box;
-	border: 5px solid #000;
 	min-width:260px;
 	color:#333;
 }
 
 .header {
 	border: 5px solid #000;
+	width: 35%;
 
 }
 .PassionProject {
