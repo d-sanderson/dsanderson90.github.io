@@ -18,22 +18,19 @@ body {
 	text-align: left;
 	font-family: "sans-serif";
 	margin: auto;
-	
+
 }
 
 .portrait {
-	height: 800px;
-	width: 300px;
+	height: 80px;
+	width: 30px;
+	display: inline;
 }
 
 .landscape {
-	height: 300px;
-	width: 800px;
+	height: 80px;
+	width: 30px;
+	display: inline;
 }
 
-.visuals {
-	display: flex;
-	flex-direction: row;
-	height: 50%;
 
-}
