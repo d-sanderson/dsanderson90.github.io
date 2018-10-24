@@ -1,8 +1,7 @@
 body {
 	font-family:"Trebuchet MS", Helvetica, sans-serif;
 	box-sizing: border-box;
-	width: 100%;
-	height: 100%;
+	min-width:260px;
 	color:#333;
 }
 
@@ -19,26 +18,22 @@ body {
 	text-align: left;
 	font-family: "sans-serif";
 	margin: auto;
-
+	
 }
 
-
-/* img {
-	width: 50%;
-	float: left;
-	text-align: center;
-} */
-
-.portrait, .landscape {
-	width: calc(100%/ 2- 5px);
-	float: left;
-	display: flex;
-
+.portrait {
+	height: 800px;
+	width: 300px;
 }
 
-.flexbox {
+.landscape {
+	height: 300px;
+	width: 800px;
+}
+
+.visuals {
 	display: flex;
-	flex-direction: row-reverse;
-	flex-wrap: wrap;
-	overflow: hidden;
+	flex-direction: row;
+	height: 50%;
+
 }
