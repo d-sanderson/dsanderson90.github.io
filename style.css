@@ -24,6 +24,8 @@ body {
 .visuals {
 	display: inline;
 	height: 50%;
+	padding: 5px;
+	margin: 5px;
 }
 img {
 	max-width: 100%;
