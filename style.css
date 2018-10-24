@@ -21,8 +21,14 @@ body {
 
 }
 
+#image-container{
+	width:100%;
+	height: auto;
+	display: block;
+}
+
 img {
-	height: 80px;
-	width: 30px;
+	height: 20vh;
+	width: auto;
 	display: inline;
 }
