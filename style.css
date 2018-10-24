@@ -29,6 +29,16 @@ img {
 	text-align: center;
 }
 
-.portrait {
-	height: 50%;
+.portrait, .landscape {
+	width: calc(100%/ 2- 5px);
+	float: left;
+	display: flex;
+
+}
+
+.flexbox {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap;
+	overflow: hidden;
 }
