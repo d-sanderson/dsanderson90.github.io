@@ -32,3 +32,12 @@ img {
 	width: auto;
 	display: inline;
 }
+
+footer {
+	margin: auto;
+	display: block;
+	background-color: black;
+	color: white;
+	font-family: monospace;
+
+}
