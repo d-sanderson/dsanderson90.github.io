@@ -34,10 +34,10 @@ img {
 }
 
 footer {
-	margin: auto;
 	display: block;
 	background-color: black;
 	color: white;
 	font-family: monospace;
+	text-align: center;
 
 }
