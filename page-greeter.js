@@ -8,4 +8,10 @@ function myPageGreeter() {
 	} else {
 		alert("Hello " + person + "! Welcome to my Pro-Dev Page!");
 	}
-}
+};
+
+function lastMod() {
+	let lm = document.getElementById('lastModified');
+	lm.innerHTML = document.lastModified;
+
+};
