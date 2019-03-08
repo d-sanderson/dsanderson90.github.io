@@ -12,6 +12,6 @@ function myPageGreeter() {
 
 function lastMod() {
 	let lm = document.getElementById('lastModified');
-	lm.innerHTML = document.lastModified;
+	lm.innerHTML = print(document.lastModified);
 
 };
