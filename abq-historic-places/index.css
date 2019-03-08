@@ -1,0 +1,26 @@
+html,body {
+    height: 100%;
+    margin: 0;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+
+.info{
+    padding: 6px 8px;
+    color: white;
+    font: 14px/16px 'Cabin', Hevetica, sans-serif;
+    background: white;
+    background: #0570b0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.info h4 {
+    margin: 0 0 5px;
+    font-size: 18pxl;
+    color: yellow;
+    font-weight: 100;
+}
