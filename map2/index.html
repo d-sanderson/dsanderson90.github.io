@@ -1,0 +1,90 @@
+
+    
+<!doctype html>
+<html lang="en">
+	<head>
+       <link rel='stylesheet' href='index.css' type='text/css' media='screen'>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+		<!--Leaflet CSS and JS -->
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+		integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+		crossorigin=""/>
+		<!-- Plugins -->
+		<link rel="stylesheet" href="plugins/leaflet-sidebar/L.Control.Sidebar.css" />
+		<link rel="stylesheet" href="plugins/easyButton/easy-button.css" />
+		<!-- Google Font -->
+		<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+		<!-- Make sure you put this AFTER Leaflet's CSS -->
+		<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+				  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+				  crossorigin=""></script>
+		<script src="plugins/leaflet-sidebar/L.Control.Sidebar.js"></script>
+		<script src="plugins/easyButton/easy-button.js"></script>
+
+		      
+		<script src='data/tweetdata.js'></script>
+		<script src='data/fbdata.js'></script>
+		
+		<title> RS21 Code Exam </title>
+	</head>
+	<body>
+		    <div id="sidebar">
+					<h1>RS21 Technical/Menu</h1>
+					<h1>Navigation</h1>
+					<p><b>Click on the &quest; button to show the sidebar again when you've closed it.</b></p>
+					<p><b>Click on the &lt; button to return to the default map view.</b></p>
+					<p><b>Click on the overlays button directly above the home view button to toggle map layers.</b></p>
+					<p><b>Click on the blue facebook markers to see the details for the selected Facebook Place</b></p>
+					<p><b>Hover over the light-blue twitter markers to see user info</b></p>
+					<p><b>Click anywhere on the map to close the sidebar</b></p>
+					<br>
+					<h1>Filtering</h1>
+
+					<h3>Filter Facebook Places</h3>
+					<!-- sort by most checkins -->
+					<!-- sort by place name -->
+					<!-- sort by long lat coords -->
+
+					<h3>Filter Tweets</h3>
+					<!-- # of tweets by user sort -->
+					<!-- sort tweets by username  -->
+					<!-- sort by long lat coords -->
+
+					<h3>Filter Census Bureau Data</h3>
+					<!-- sort pop by -->
+
+					<h1>Q and A from Prompt</h1>
+
+					<p><b>Why you chose the strategy you used?</b></p>
+					<p>I approached the project by first digesting the data and assessing the data sets and brainstorming ways I could filter and present it.</p>
+					
+					<p><b>What you found most interesting about the project?</b></p>
+					<p>The most interesting part of this project was manipulating the Census Bureau Data. It is the most complex JSON object that I have ever </p>
+					<p><b>How you would extend or improve the project you’ve done for this prompt.?</b></p>
+				
+			
+					<ul>
+						<li><a href="listing-markers.html">listing-markers example</a></li>
+						<li><a href="two-sidebars.html">two-sidebars example</a></li>
+					</ul>
+		
+				</div>
+        <div id="map"></div>
+		<script src='index.js'></script>
+		
+		<script>
+		//
+		let fbArr = Object.values(facebookData.features)
+
+		let twtArr = Object.values(tweetData.features)
+
+		let localbiz = fbArr.filter(el => el.properties.checkins > 5000)
+
+
+		console.log(localbiz)
+		
+		</script>
+        
+	</body>
+</html>
