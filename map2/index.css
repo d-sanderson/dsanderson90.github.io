@@ -19,10 +19,19 @@ html,body {
 }
 
 .homebtn {
-    background-color: white;
     font-size: 1.5em;
     width: 48px;
     height: 48px;
-    z-index: 8;
+    
+}
+
+.leaflet-popup-content img {
+    display: block;
+    margin: 0 auto;
+
+}
+
+.leaflet-popup-content h1,.leaflet-popup-content p, .leaflet-popup-content blockquote  {
+   text-align: center;
 }
 

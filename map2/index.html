@@ -3,7 +3,9 @@
 <!doctype html>
 <html lang="en">
 	<head>
-       <link rel='stylesheet' href='index.css' type='text/css' media='screen'>
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/css/bootstrap-select.min.css" /> -->
+    <link rel='stylesheet' href='index.css' type='text/css' media='screen'>
 		<meta charset="UTF-8">
 		<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 		<!--Leaflet CSS and JS -->
@@ -18,19 +20,19 @@
 		<!-- Make sure you put this AFTER Leaflet's CSS -->
 		<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
 				  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-				  crossorigin=""></script>
+					crossorigin=""></script>
+		<!-- Leaflet plugins -->
 		<script src="plugins/leaflet-sidebar/L.Control.Sidebar.js"></script>
 		<script src="plugins/easyButton/easy-button.js"></script>
 
-		      
 		<script src='data/tweetdata.js'></script>
 		<script src='data/fbdata.js'></script>
 		
-		<title>Map 2</title>
+		<title> RS21 Code Exam </title>
 	</head>
 	<body>
 		    <div id="sidebar">
-					<h1>Map 2/Menu</h1>
+					<h1>RS21 Technical/Menu</h1>
 					<h1>Navigation</h1>
 					<p><b>Click on the &quest; button to show the sidebar again when you've closed it.</b></p>
 					<p><b>Click on the &lt; button to return to the default map view.</b></p>
@@ -42,18 +44,40 @@
 					<h1>Filtering</h1>
 
 					<h3>Filter Facebook Places</h3>
+					<div id='fb'></div>
+					<p>Select a place category to see all FB Places within that category.</p>
+							<div class="dropdown">
+									<select class="placeselect">
+											<option>Select a category</option>
+									</select>
+							</div>
+					
 					<!-- sort by most checkins -->
 					<!-- sort by place name -->
 					<!-- sort by long lat coords -->
 
 					<h3>Filter Tweets</h3>
+					<div id='twt'></div>
+					<p>Select a user to see their tweet(s), location(s), and time(s) of tweet.</p>
+					<div class="dropdown">
+							<select class="userselect">
+									<option>Select a user</option>
+							</select>
+					</div>
 					<!-- # of tweets by user sort -->
 					<!-- sort tweets by username  -->
 					<!-- sort by long lat coords -->
 
 					<h3>Filter Census Bureau Data</h3>
 					<!-- sort pop by -->
-
+					<p>Select a census code</p>
+							<div class="dropdown">
+									<select class="censusselect">
+											<option>Select a census code</option>
+									</select>
+							</div>
+					
+					<br>
 					<h1>Q and A from Prompt</h1>
 
 					<p><b>Why you chose the strategy you used?</b></p>
@@ -73,18 +97,6 @@
         <div id="map"></div>
 		<script src='index.js'></script>
 		
-		<script>
-		//
-		let fbArr = Object.values(facebookData.features)
-
-		let twtArr = Object.values(tweetData.features)
-
-		let localbiz = fbArr.filter(el => el.properties.checkins > 5000)
-
-
-		console.log(localbiz)
-		
-		</script>
         
 	</body>
 </html>

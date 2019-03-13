@@ -12,12 +12,13 @@ const mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStr
 //grab census data
 
 const cbUrl = 'data/berncensusblocks.geojson'
-let censusBlockData;
+let cbArr;
     fetch(cbUrl)
       .then(res => res.json())
+      .then(data => console.log(data))
       .then(data => censusBlockData = data)
       .then(censusBlockData => L.geoJSON(censusBlockData, {style: censusBlockStyle}).addTo(map));
-
+      
 //grab tweet data
 
 const twtUrl = 'data/Twitter_141103_w_fields_deduped.geojson'
@@ -27,6 +28,7 @@ let twtData;
     fetch(twtUrl)
       .then(res => res.json())
       .then(data => twtData = data)
+      .then(twtData => console.log(twtData))
 
 //grab fb data
 const fbUrl = 'data/FacebookPlaces_Albuquerque_w_fields_deduped.geojson'
@@ -34,11 +36,12 @@ let fbData;
     fetch(fbUrl)
       .then(res => res.json())
       .then(data => fbData = data)
+      .then(data => console.log(data))
     
 let fbPlaces = L.geoJson(facebookData, {
         pointToLayer: function(feature, latlng) {
             return L.circleMarker(latlng, {
-                radius: 1,
+                radius: 3,
                 fillColor: '#3b5998',
                 color: '#3b5998',
                 weight: 1,
@@ -47,9 +50,11 @@ let fbPlaces = L.geoJson(facebookData, {
                 });
         },
         onEachFeature: function (feature, layer) {
-            layer.bindPopup(`<h1> ${feature.properties.place}</h1>
+            layer.bindPopup(`
+            <img src="./images/facebook.png">
+            <h1> ${feature.properties.place}</h1>
             <p> Business Type: ${feature.properties.category} </p> 
-            <info># of check-ins ${feature.properties.checkins} </info>`)
+            <p># of check-ins ${feature.properties.checkins} </p>`)
             
             layer.on('mouseover', function(e) {
                 this.openPopup();
@@ -62,7 +67,7 @@ let fbPlaces = L.geoJson(facebookData, {
 let tweets = L.geoJson(tweetData, {
     pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, {
-            radius: 1,
+            radius: 2,
             fillColor: '#1DA1F2',
             color: '#1DA1F2',
             weight: .2,
@@ -70,9 +75,11 @@ let tweets = L.geoJson(tweetData, {
             fillOpacity: 0.8});
     },
     onEachFeature: function (feature, layer) {
-        layer.bindPopup(`<h1> ${feature.properties.username}</h1>
-        <p> ${feature.properties.tweet} </p> 
-        <small> ${feature.properties.time} </small>`)
+        layer.bindPopup(`
+        <img src="./images/twitter.png">
+        <h1> Username: ${feature.properties.username}</h1>
+        <blockquote> ${feature.properties.tweet} </blockquote> 
+        <p><b> Date of Tweet ${feature.properties.time.toLocaleString()} <b><p>`)
     }
 })            
 
@@ -108,8 +115,8 @@ let baseLayers = {
     }    
 
 let overlays = {
-    'Tweets': tweets,
-    'Facebook Places' : fbPlaces,
+    '<img src="./images/twitter.png"><br>Tweets': tweets,
+    '<img src="./images/facebook.png"><br>Facebook Places' : fbPlaces,
 
 }
 
@@ -146,12 +153,12 @@ function onEachFeature(feature, layer) {
 
 // CONTROLS
 
-//create a control in the top right corner
+//create a home control in the top right corner + add it to the map [vanilla leaflet way]
 let homeControl = L.control({position: 'topright'});
 
 //create a div and button
 homeControl.onAdd = function (map) {
-    let div = L.DomUtil.create('div', 'container');
+    let div = L.DomUtil.create('div', 'cont');
     div.innerHTML = '<button class="homebtn">&lt</button>'
     return div;
 }
@@ -163,7 +170,7 @@ function flyHome() {
 
 //add it to the map
 homeControl.addTo(map);
-//vanilla js event listener
+//add vanilla js event listener
 document.querySelector('.homebtn').addEventListener('click', flyHome)
 
 //create a sidebar using leaflet plugin and add it to the top left with .addControl
@@ -187,25 +194,116 @@ map.on('click', function () {
     sidebar.hide();
 })
 
-// sidebar.on('show', function () {
-//     console.log('Sidebar will be visible.');
-// });
+//FILTERING
 
-// sidebar.on('shown', function () {
-//     console.log('Sidebar is visible.');
-// });
+//turn Objects into arrays to so array methods can be used.
+let fbArr = Object.values(facebookData.features)
 
-// sidebar.on('hide', function () {
-//     console.log('Sidebar will be hidden.');
-// });
+let twtArr = Object.values(tweetData.features)
 
-// sidebar.on('hidden', function () {
-//     console.log('Sidebar is hidden.');
-// });
+//Facebook data filtering
+//filter place by # of check-ins greater than value
+function filterByCheckins(numOfCheckIns) {
+let localbiz = fbArr.filter(el => el.properties.checkins > numOfCheckIns)
+return localbiz;
+}
 
-L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {
-    console.log('Close button clicked.');
-});
+//filter places by category
+function getPlacesbyCategory(category) {
+    let places = fbArr.filter(el => el.properties.category === category);
+    let para = document.createElement('p');
+    para.textContent = ` There are ${places.length} places that match the ${category} category`;
+    document.getElementById('fb').appendChild(para);
+    for (var i=0; i < places.length; i++) {
+        var lon = places[i].geometry.coordinates[0];
+        var lat = places[i].geometry.coordinates[1];
+        var popupPlace = `
+            <img src="./images/facebook.png">
+            <h1> ${places[i].properties.place}</h1>
+            <p> Business Type: ${places[i].properties.category} </p> 
+            <p># of check-ins ${places[i].properties.checkins} </p>
+        `
+        var markerLocation = new L.LatLng(lat, lon);
+        var marker = new L.Marker(markerLocation);
+         map.addLayer(marker);
+     
+         marker.bindPopup(popupPlace);
+     
+     }
+    return places;
+
+}
 
 
 
+//map all the biz categories into category array, remove duplicates, and sort alphabetically.
+let categories = fbArr.map(el => el.properties.category)
+categories = categories.filter((el, i) => categories.indexOf(el) === i)
+categories = categories.sort();
+
+document.getElementById('fb').innerHTML = 
+`There are <b>${fbArr.length}</b> Facebook Places
+and <b>${categories.length}</b> different categories.
+` 
+
+let placeselect = document.querySelector('.placeselect')
+
+for (let i = 0; i < categories.length; i++) {
+    let opt = categories[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    placeselect.appendChild(el);
+  }
+
+  placeselect.addEventListener('change', (e) => getPlacesbyCategory(e.target.value))
+
+//map all users into user array, remove duplicates, and sort alphabetically.
+let users = twtArr.map(el => el.properties.username);
+users = users.filter((el, i) => users.indexOf(el) === i)
+users = users.sort();
+
+let userselect = document.querySelector('.userselect')
+
+for (let i = 0; i < users.length; i++) {
+    let opt = users[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    userselect.appendChild(el);
+  }
+
+document.getElementById('twt').innerHTML = 
+`There are <b>${twtArr.length}</b> Tweets from 
+ ${users.length} unique users.
+` 
+
+//map users and corresponding tweet into array, sort by users name, and reduce to calculate array with number of tweets by user
+
+let usersByNumOfTweets = twtArr.map(el => [el.properties.username, el.properties.tweet]).sort();
+
+function getTweetsByUser(username) {
+    userTweets = twtArr.filter(el => el.properties.username === username)
+    let para = document.createElement('p');
+    para.textContent = ` There are ${userTweets.length} tweets from ${username}`
+    document.getElementById('twt').appendChild(para);
+    for (var i=0; i < userTweets.length; i++) {
+           
+        var lon = userTweets[i].geometry.coordinates[0];
+        var lat = userTweets[i].geometry.coordinates[1];
+        var popupTweet = `
+        On ${userTweets[i].properties.time} ${userTweets[i].properties.username} 
+        tweeted:  ${userTweets[i].properties.tweet}`
+        var markerLocation = new L.LatLng(lat, lon);
+        var marker = new L.Marker(markerLocation);
+         map.addLayer(marker);
+     
+         marker.bindPopup(popupTweet);
+     
+     }
+    return userTweets;
+
+    
+}
+
+userselect.addEventListener('change', (e) => { getTweetsByUser(userselect.value);});
