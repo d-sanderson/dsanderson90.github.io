@@ -24,6 +24,7 @@
 		<!-- Leaflet plugins -->
 		<script src="plugins/leaflet-sidebar/L.Control.Sidebar.js"></script>
 		<script src="plugins/easyButton/easy-button.js"></script>
+		<script src="plugins/leaflet-ajax/leaflet.ajax.js"></script>
 
 		<script src='data/tweetdata.js'></script>
 		<script src='data/fbdata.js'></script>
@@ -66,14 +67,24 @@
 					</div>
 					<!-- # of tweets by user sort -->
 					<!-- sort tweets by username  -->
-					<!-- sort by long lat coords -->
+				
 
-					<h3>Filter Census Bureau Data</h3>
-					<!-- sort pop by -->
-					<p>Select a census code</p>
+					<h3>Filter American Census Bureau Data</h3>
+				Use the filters below to see which census tracts have the highest populations by age and sex. 
+				The default view shows total population.  
+				
+					<div id='acb'></div> 
+					<p>Select a Male Age Range</p>
 							<div class="dropdown">
-									<select class="censusselect">
-											<option>Select a census code</option>
+									<select class="maleageselect">
+											<option>Select a Male Age</option>
+									</select>
+							</div>
+
+					<p>Select a Female Age Range</p>
+							<div class="dropdown">
+									<select class="femaleageselect">
+											<option>Select a Female Age</option>
 									</select>
 							</div>
 					
@@ -87,10 +98,10 @@
 					<p>The most interesting part of this project was manipulating the Census Bureau Data. It is the most complex JSON object that I have ever </p>
 					<p><b>How you would extend or improve the project you’ve done for this prompt.?</b></p>
 				
-			
+						<button class="test">Change Layer</button>
 					<ul>
-						<li><a href="listing-markers.html">listing-markers example</a></li>
-						<li><a href="two-sidebars.html">two-sidebars example</a></li>
+						<li><a href="https://github.com/dsanderson90">GitHub</a></li>
+						<li><a href="https://www.linkedin.com/in/david-sanderson-49422879/">Linked In</a></li>
 					</ul>
 		
 				</div>
