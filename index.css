@@ -1,7 +1,7 @@
 
 body {
   margin: 0;
-  font-family: 'Lacquer', sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 body.dark-mode {
@@ -67,6 +67,7 @@ section#welcome-section, section#contact-section {
 
 a {
   text-decoration: none;
+  /* font-family: 'Lexend Exa' */
 }
 
 #welcome-section > .greeting {
