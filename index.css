@@ -67,7 +67,7 @@ section#welcome-section, section#contact-section {
 
 a {
   text-decoration: none;
-  /* font-family: 'Lexend Exa' */
+  font-family: 'Lexend Exa'
 }
 
 #welcome-section > .greeting {
@@ -94,7 +94,7 @@ section#contact-section {
 }
 
 h1, #projects-section > h1  {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 section#welcome-section > div {
@@ -124,7 +124,7 @@ img {
  border-radius: 10% 10% 10% 10%;
 }
 
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (min-width: 566px) and (max-width: 1024px) {
   .projects-tagline.short, .greeting.short, .contact-title.short {
     display: inline-block;
     text-align: center;
@@ -149,6 +149,34 @@ img {
 
   .project-title {
     margin: 10% 0;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 565px) {
+  .project-title {
+    margin: 10% 0;
+    font-size: 1.3rem;
+  }
+  .projects-tagline.short, .greeting.short, .contact-title.short {
+    display: inline-block;
+    text-align: center;
+    padding-top: 10%;
+  }
+
+  .contact-title.short {
+
+    padding-bottom: 15%;
+  }
+  .projects-tagline, .greeting {
+    display: none;
+  }
+
+  navbar, div.console-container {
+   display: none;
+  }
+
+  #tagline {
+    text-align: center
   }
 }
 
