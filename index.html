@@ -1,345 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
-	<head>
+<html lang="en">
+  <head>
 
-		<meta charset="utf-8"/>
-		<link rel="stylesheet" type="text/css" href="./style.css">
-		<link rel="icon" href="./sinsentido16.png">
-		<title>David Sanderson's Pro-Dev Page:</title>
-		
-	</head>
-	<body>
-		<div class="header">
-			<section>
-				<header><h1>David Sanderson's Portfolio</h1></header>
-				<div id="lastModified"></div>
-				<p>Last updated: November 4th, 2018</p>
-				<p>Career Buddy: Dayn Auguston</p>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0,
+maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla|Lacquer&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>David Sanderson</title>
+  </head>
+  <body id='body' class='dark-mode'>
+    <nav id="navbar">
+      <div class="btn">
+        <button id='toggle' type="button" name="dark_light" title="Toggle dark/light mode"><i id='lol' class="fa fa-lightbulb-o fa-2x"></i></button>
+      </div>
+      <div class="links">
+        <a href="https://github.com/dsanderson90">Github</a>
+        <a href="#projects-section">Projects</a>
+        <a href="#contact-section">Contact</a>
+      </div>
+    </nav>
+    <section id="welcome-section">
+      <h1 class='greeting'>
+       Hi, I am David Sanderson.
+      </h1>
+      <h1 class='greeting short'>David Sanderson</h1>
+       <div id='tagline'> - An Albuquerque-based Web Developer.</div>
+      <div class="social-media">
+      <a href="https://github.com/dsanderson90"><i class="fa fa-github fa-2x"></i></a>
+      <a href="mailto:sanderdj90@gmail.com"><i class="fa fa-envelope fa-2x"></i></a>
+      <a href="https://www.linkedin.com/in/david-sanderson-49422879"><i class="fa fa-linkedin fa-2x"></i></a>
+      </div>
+    </section>
+    <section id="projects-section">
+      <h1 class='projects-tagline'>These are some of my Projects.</h1>
+      <h1 class='projects-tagline short'>My Projects.</h1>
 
-				<button onclick="myPageGreeter()">Click Me (If you dare)</button>
+        <h3 class="project-title"><span class="code">&lt;</span>Bubble-up Menu<span class="code">&#47;&gt;</span></h3>
+        <a href="https://codepen.io/desertdwellndev/pen/yWdYve"><img src="./imgs/bubble-up-menu.png" alt="bubble-up-menu-screenshot">
+        </a>
 
-				
-				<h2>Social Media</h2>
-				<ul>
-					<li><a href="https://www.linkedin.com/in/david-sanderson-49422879/" target="_blank">LinkedIn</a></li>
-					<li><a href="https://twitter.com/desertdwellndev" target="_blank">Twitter</a></li>
-					<li><a href="https://github.com/dsanderson90" target="_blank">Github</a></li>
-				</ul>
-			</section>
-		</div>
+        <h3 class="project-title"><span class="code">&lt;</span>Random Keypad<span class="code">&#47;&gt;</span></h3>
+        <a href=""><img src="./imgs/random-keypad.png" alt=""></a>
+        <h3 class="project-title"><span class="code">&lt;</span>Batman Tribute Page<span class="code">&#47;&gt;</span></h3>
+        <a href=""><img src="./imgs/batman.png" alt=""></a>
+        <h3 class="project-title"><span class="code">&lt;</span>Star Wars API<span class="code">&#47;&gt;</span></h3>
 
-		<main>
-			<h1>Pro-Dev Activities</h1>
+        <h3 class="project-title"><span class="code">&lt;</span>Todo App (Vanilla JS)<span class="code">&#47;&gt;</span></h3>
+        <a href=""><img src="./imgs/todo-app-vanilla-js.png" alt=""></a>
+      </div>
 
-			<h2>Table of Contents</h2>
-			<ul>
-				<li><a href="#week1reflection">Week l</a></li>
-				<li><a href="#week2reflection">Week 2</a></li>
-				<li><a href="#week3reflection">Week 3</a></li>
-				<li><a href="#week4reflection">Week 4</a></li>
-				<li><a href="#week5reflection">Week 5</a></li>
-				<li>Week 6</li>
-				<li>Week 7</li>
-				<li>Week 8</li>
-				<li>Week 9</li>
-				<li>Week 10</li>
-				<li><a href="#collaboration">Forbidden Island</a></li>
-				<li><a href="#onemillioncups">One Million Cups</a></li>
-				<li><a href="#passionproject">Passion Project</a></li>
-				<li><a href="#visualsspeak">Visuals Speak</a></li>
-			</ul>
+    </section>
 
-			<div id="learningstyle">
-				<h2>Learning Style: </h2>
-				<ul>
-					<li>Auditory: 40%</li>
-					<li>Visual: 40%</li>
-					<li>Tactile: 20%</li>
-				</ul>
-			</div>
+    <section id="contact-section">
+      <h1 class='contact-title short'>Contact Me.</h1>
+      <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+      <div class="social-media">
+        <a id="profile-link" href="https://github.com/dsanderson90"><i class="fa fa-github fa-4x"></i></a>
+        <a href="mailto:sanderdj90@gmail.com"><i class="fa fa-envelope fa-4x"></i></a>
+        <a href="https://www.linkedin.com/in/david-sanderson-49422879"><i class="fa fa-linkedin fa-4x"></i></a>
+      </div>
+    </section>
 
-			<section>
-				<h2>Activities:</h2>
-				<div id="quantAccomps">
-					<h3>Quantitative Accomplishments</h3>
-					<ul>
-						<li>I am determined. Once I sink my teeth into a task I become obsessive sometimes this leads to
-							burnout
-							and
-							frustration
-						</li>
-						<li> I am fair and compassionate and like to take time to understand other peoples ideas and <br>
-							perspectives. I like to collaborate and enjoy getting all the right people in the right room to
-							work
-							on a project. Sometimes
-							others <br>
-							may not like the direction of my leadership.
-						</li>
-						<li>
-							I am empathetic and take time to consider how others may be affected by my actions. Sometimes I
-							overthink
-							things.
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<div id="qualAccomps">
-				<h3>Qualitative Accomplishments</h3>
-				<ul>
-					<li><b>135%</b> over yearly sales goal 2016 (PR Newswire)</li>
-					<li>Lead <b>3</b> Sales meetings in 2016</li>
-					<li>Highest sales of beer and wine <b>15%</b> over closest contender</li>
-				</ul>
-			</div>
-
-			<div id="elevatorpitch">
-				<h2>Pitch:</h2>
-
-
-				<a href="https://www.youtube.com/watch?v=mjaayCARwro">Pump Up Song</a>
-				<p><strong>Version 3: </strong>
-					Hi my name is David Sanderson. I am a Full-stack Web developer. I use web technologies like
-					Angular, JS, PHP, and Bootstrap to create custom web solutions. My favorite thing about coding is that
-					you can use it to solve problems and build whatever you want! I want to use my coding skills to
-					strengthen my community and get others
-					into learning how to code. What can we build together to strengthen our community?
-				</p>
-
-				<p><strong>Version 2: </strong>
-					Hi my name is David Sanderson. I am a Full-stack Web developer with experience using web technologies
-					like
-					Angular, JS, PHP, and Bootstrap to create custom web solutions. My favorite thing about coding is that
-					you can use it to solve problems and build whatever you want! I want to use my coding skills to
-					strengthen my community and get others
-					into learning how to code. What can we build together to strengthen our community?
-
-				<p><strong>Version 1: </strong>Hi my name is David Sanderson. I am a Full-stack Web developer with
-					experience using web technologies like Angular, JS, PHP, and Bootstrap to create custom web solutions. My
-					favorite thing about coding is that you can use it to solve problems and build whatever you want! I want
-					to use my coding skills to strengthen my community and get others into learning how to code. What can we
-					build together in our community? I am an enthusiastic learner who excels in environments where I can
-					problem solve and contribute to a team. Recently I build a madlib generator for my portfolio which
-					familiarized me with array manipulation and taught me how to randomly select elements from arrays. I was
-					on the dev team for 505FoodTruckFinder which was a contestant in the UNM App contest. I worked
-					intensively on the Google Maps Javascript API integration during this project and learned how to get a
-					user's location, store it in a DB and send it back to our front end. I am currently learning React and
-					MongoDB in my free time.</p>
-
-			</div>
-			<div id="image-container">
-				<div class="portrait">
-					<img src="worker.jpg" alt="worker">
-				</div>
-
-				<div class="landscape">
-					<img src="soaringeagle.png" alt="Soaring Eagle">
-				</div>
-			</div>
-			<h2 id="visualsspeak">Visuals Speak</h2>
-			<p>My first photo is a rock-climber dressed for an interview. In the photo he is just starting to climb a rock
-				wall. This is where I am right now. I have had 3 careers over the past 5 years and here I am again starting
-				to climb the rock wall. In the past I was picking jobs for the wrong reasons choosing money and foregoing my
-				interests and drives. I have finally found a path that I am passionate and stimulated by so hopefully this
-				will be my last time having to start from the bottom of the rock wall. My second photo is of an eagle
-				soaring. In three years that will be me looking down at all I have learned.</p>
-
-			<table>
-				<thead>
-					<tr>
-						<th>-----------</th>
-						<th>Professional</th>
-						<th>Personal</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th>Identity</th>
-						<td>Javascript Dev, Designer</td>
-						<td>Puzzle Addict, Anthropologist,</td>
-					</tr>
-					<tr>
-						<th>Channels</th>
-						<td>LinkedIn, Twitter, Medium, Github</td>
-						<td>Instagram</td>
-					</tr>
-					<tr>
-						<th>Content</th>
-						<td></td>
-						<td>20</td>
-					</tr>
-				</tbody>
-			</table>
-
-			<h2> Who am I?</h2>
-			<p>I am David I am a... <br>
-				Identity (that you want to portray): David Sanderson / desertdwellingdev <br>
-				Channels: LinkedIn, Twitter, Instagram, Medium?, Github <br>
-				Content Strategy: 5 Tweets/day, <1 instagram 1 blog post/3 months <br>
-			</p>
-
-
-			<h2><strong>Weekly Reflections</strong></h2>
-
-
-			<div id="week1reflection">
-				<h3><strong>Week 1 Reflection:</strong></h3>
-				<p>Holy ****, What an exciting first week! It's been a whirlwind but it feels amazing to be here. We covered
-					quite a bit this week - ranging from basic HTML, git repos, server deployment, to data design and more. I
-					now feel comfortable throwing up basic HTML websites to the server and laughing at how they looks like
-					they are from the 90's. I can't wait to get better at CSS and Javascript so I can bring my sites into the
-					modern age. On Wednesday I went to the React505 meetup and was blown away by the technology. It made me
-					even more exited to learn Javascript! I love how responsive React is and how if you break something, it
-					is immediately reflected on the browser without a refresh. Also learning about the virtual DOM was super
-					fascinating. This week has been both challenging and inspiring. I know I have a lot to learn and that the
-					weeks ahead will be arduous but my hopes balance out the stress and trepidations. I can't wait to learn
-					more!
-				</p>
-			</div>
-
-			<div id="week2reflection">
-				<h3><strong>Week 2 Reflection:</strong></h3>
-				<p>Another week down! This week was filled with lots of ups and downs. Programming is a puzzle and the
-					process is just as enjoyable as the product. Each day I am immersed in a language that I don't understand
-					confronted by concepts that are equally perplexing. It's hard that for sure but damn if it isn't
-					rewarding. I have found that I enjoy making something new and the anticipation I experience when I test
-					it. Will it work or will it throw me a bunch of errors? Either way I will persist. I relish in the
-					debugging as much I like building something new. What piece isn't working? Is there a flaw in my logic?
-					What do I need to know to make this work? Even if I can get one piece to work I'll be one step closer to
-					solving the larger problem. Some of the concepts we learned this week included Object Orient programming
-					using PHP and Javascript. The data design project kicked my ass a bit but things are starting to ffall
-					into place. I am beginning to understand Clasess and how constructors make it easier to assign
-					values(states) to our objects. I also had an aha moment when I read that Classes live in a lib file and
-					that the can be exported and imported into the file in which we work with them. It was also really cool
-					to see that a long snipper of code can be packaged into one variable and then executed. I look forward to
-					what I will learn next week.
-				</p>
-			</div>
-
-			<div id="week3reflection">
-				<h3><strong>Week 3 Reflection:</strong></h3>
-				<p>Reflections log stardate October 26th, 2018. We encountered several alien concepts this week. Some of
-					them included CSS and a lecture about abstract classes in PHP. These concepts were fascinating and
-					caused my brain to consume high amounts of glucose. Fortunately, the mess hall provided me with adequate
-					nourishment. I really enjoyed working on the CSS challenge and found it to be a well-designed . This
-					assignment gradually teaches you handy CSS selectors and properties. After completing
-					the formatting, I feel confident about styling my Personal Website. I spent quite a bit of time
-					reading MDN this week. One concept I found interesting was about prototypal inheritance in Javascript.
-					Objects/Classes can inherit methods and states from their parent class so you don't have to rewrite
-					the same code when you create a new class. The prototype chain will point to the parent class so the
-					child class will inherit its properties and the code will remain DRY. I also read about how you
-					can insert new methods into a class and that instantiated objects will dynamically get access to those
-					new methods. Cool Right?! </p>
-			</div>
-
-			<div id="week4reflection">
-				<h3><strong>Week 4 Reflection:</strong></h3>
-				<p>1 Month down. We are close to half-way through (time flies when there is a fire hose of information
-					blasting your brain). This week we broke out into our capstone teams and completed our personas and began
-					data-design for our
-					projects. I have had bouts of uncertainty about completing all the features we want in our project but I
-					trust my team and feel
-					confident that we will be able to make it happen. I am looking forward to becoming more familiar
-					with the php and what is needed to have a functional backend for this project. I want to tackle the front
-					end and learn how to glue JS to PHP to MYSQL. I have continued practicing Javascript after hours and am
-					excited to build each piece of this project.
-				</p>
-			</div>
-
-			<div id="week5reflection">
-				<h3><strong>Week 5 Reflection:</strong></h3>
-				<p>Wow. The time is truly flying by.. This week we finished up our classes for capstone and began writing
-					our unit tests. I am excited to begin work on API integration and start learning Angular! I expect we
-					will conclude Unit testing by Thursday at the latest. I look forward the debugging process and am sure I
-					will become much more familiar with my code in the upcoming days. We had several
-					interesting guest lectures and learned about CSS variables and Big O Notation. Each week we grapple with
-					new concepts that are interesting and mentally stimulating. I can't for what I'll learn next week!
-				</p>
-			</div>
-
-
-			<div id="onemillioncups">
-				<h3><strong>One Million Reflection:</strong></h3>
-				<p>On Wednesday we went on a field trip (XD)! I met two people at this networking event and may have landed
-					some freelance work! Mario Valdez is a media analyst for local radio stations. He needs to update his
-					personal website to include audio files. I also met Daniel Archunde who works for an Albuquerque Record
-					Label. They need a website too! I plan on following up with them next week to schedule a time to discuss
-					their needs next steps.
-				</p>
-			</div>
-
-
-			<h3>Activity - Find 2 Orgs.</h3>
-			<p><strong>Non-Profit - BEE Scholarships</strong> <br>
-				Target Contact - Jorge Hernandez <br>
-				Contact Info - jorge.hernandez@cision.com<br>
-				Website - <a href="http://www.beescholarships.org">http://www.beescholarships.org </a> <br>
-				Why BEE - I like their mission, their website is from Squarespace, and I know the VP of the NP. <br>
-				Strategy for outreach: Research NP, Prepare Pitch, Contact Jorge via Email and Phone. <br>
-				<br>
-				<strong>For Profit - Philips Badge Co </strong> <br>
-				Target Contact - Philip Schneider <br>
-				Contact Info - Philip Schneider <br>
-				No Website <br>
-				Why Phillips Badge Co - The owner is my father and he needs a website. <br>
-				Strategy for outreach: Call offer to make a website that he already wants me to build. <br>
-				<br>
-			<h3>Informational Interview: Javonne </h3>
-			<h5>Occupation: </h5>
-
-			<h2>Salary Expectation/Potential </h2>
-			<p>As an entry level Web Developer I expect to make a less than or equal to 40k annually. According to
-				Payscale.com's Salary Report, I will make anywhere between 38-54k/year with less than 1 year experience.
-				In Albuquerque's job market I think I'll more likely start between 30-40k/year. I plan to build out my
-				portfolio
-				after bootcamp with projects that I will make me more attractive to local employers. Post bootcamp,
-				I will be open to internships that pay less than this range so that I can get a foot in the door and gain
-				industry experience. I do still have to pay rent and feed myself so I would not be able to take an unpaid
-				internship.</p>
-
-			<figure id="initiative">
-				<h3>Stove-top Initiatives</h3>
-				<img src="initiative.png" alt="My Stovetop Initiatives">
-				<figcaption>Fig. 1: Stove-top Initiatives</figcaption>
-			</figure>
-
-			<figure id="goldencircle">
-				<h3>The Golden Circle</h3>
-				<img src="GoldenCircle.jpg" alt="My Golden Circle">
-				<figcaption>Fig. 2: Golden Circle</figcaption>
-			</figure>
-
-			<div id="passionproject">
-				<h3><strong>Passion Project</strong></h3>
-				<p>I started teaching myself how to play Piano 4 years ago. I've always been a musical person but told
-					myself that it was too late in my life to learn an instrument. When my desire to create finally
-					overcame my doubts, I got on craigslist and found myself a basic keyboard and practicing for an hour
-					each day. I really wanted to be able to play my favorites songs and some idical music that I had heard
-					growing up with my Dad. I made a lot of progress in the first year and often would go over my
-					scheduled hour of practice just because I was enjoying learning. Eventually I bought a sweet Yamaha
-					Electronic Keyboard with weighted keys. I love playing music because it brings me into a focused state
-					where all of my worries and doubts sort of fade to the background. I love being so absorbed in a task
-					that I cannot think of the past or future. It is interesting because in a flow state your mind is both
-					relaxed and engaged in the task at hand. I continue to pratice piano and love learning new songs.
-				</p>
-			</div>
-
-			<div id="collaboration">
-				<h3><strong>Forbidden Island Reflection</strong></h3>
-				<p>
-					Forbidden island was a useful exercise in collaboration. We spent half the time allotment figuring out
-					game set up/how to play and got 2/4 treasures. Playing through the game revealed that I like to be have
-					some degree of
-					control of the direction of the team. If no one steps up to the lead role I am happy to take this
-					position but I prefer to be 2nd in command and encourage a diplomatic decision-making process. This
-					exercise is valuable in that it shows us how we will work together as a team. One challenge I think we
-					will encounter is disagreement over the solution to problems. There will be multiple solutions but which
-					one is the best?
-				</p>
-			</div>
-
-		</main>
-		<footer>Website by: David Sanderson</footer>
-
-	</body>
+    <script src="index.js"></script>
+  </body>
 </html>
