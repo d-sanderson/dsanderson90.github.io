@@ -2,7 +2,7 @@ let greeting = document.querySelector(".greeting")
 let greetingStr = document.querySelector(".greeting").innerText;
 let greetingArr = greetingStr.split('');
 let output0 = greetingArr.map( (el, i) => {
-  el = `<span class='ltr'>${el}</span>`
+  el = `<span style='color: ${getRandomColor()}'>${el}</span>`
   return el;
 })
 greeting.innerHTML = output0.join('');
@@ -31,43 +31,6 @@ let output2 = projectsTaglineShortArr.map ( (el, i) => {
 })
 projectsTaglineShort.innerHTML = output2.join('')
 
-let contactTitleShort = document.querySelector(".contact-title.short");
-let contactTitleShortStr =contactTitleShort.innerText;
-let contactShortArr = contactTitleShortStr.split('');
-let output3 = contactShortArr.map ( (el, i) => {
-  el = `<span class="down" style='color: ${getRandomColor()}'>${el}</span>`
-  return el;
-
-})
-contactTitleShort.innerHTML = output3.join('')
-// let contactShort = document.querySelector('.contact-title.short');
-// let contactShortStr =
-
-
-
-let spans = document.querySelectorAll(".ltr");
-
-setInterval( () => {
-  spans.forEach(span => span.style.color = getRandomColor(), 100000);
-});
-
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
-
-
-
-// setTimeout(function () {spans.forEach(span => setInterval( () => {
-//   span.style.color = getRandomColor()
-// ,20000}))}, 5000);
-
-// CSS Animation of the project
-//inserts spans and class of either up or down on each letter for
 let projectTagline = document.querySelector('.projects-tagline');
 let projectTaglineStr = document.querySelector('.projects-tagline').innerText
 let projectTaglineArr = projectTaglineStr.split('')
@@ -92,6 +55,35 @@ document.getElementById('toggle').addEventListener('click', function() {
   document.getElementById('lol').style.color = getRandomColor();
 
 });
+
+let contactTitleShort = document.querySelector(".contact-title.short");
+let contactTitleShortStr =contactTitleShort.innerText;
+let contactShortArr = contactTitleShortStr.split('');
+let output3 = contactShortArr.map ( (el, i) => {
+  el = `<span class="down" style='color: ${getRandomColor()}'>${el}</span>`
+  return el;
+
+})
+contactTitleShort.innerHTML = output3.join('')
+
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
+
+// setTimeout(function () {spans.forEach(span => setInterval( () => {
+//   span.style.color = getRandomColor()
+// ,20000}))}, 5000);
+
+// CSS Animation of the project
+//inserts spans and class of either up or down on each letter for
+
 
 // function([string1, string2],target id,[color1,color2])
 consoleText(['Contact Me.', 'Get In Touch.', 'Let\'s build something.', 'Hire me!'], 'text',[getRandomColor(), getRandomColor(), getRandomColor()]);
@@ -144,5 +136,4 @@ function consoleText(words, id, colors) {
     }
   }, 400)
 }
-
 

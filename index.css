@@ -65,6 +65,10 @@ section#welcome-section, section#contact-section {
 
 }
 
+a {
+  text-decoration: none;
+}
+
 #welcome-section > .greeting {
   margin-top: 10%;
 }
@@ -97,10 +101,8 @@ section#welcome-section > div {
   font-family: 'Karla', sans-serif;
 }
 
-.project-title {
+#projects-section > a {
   font-size: 2rem;
-  /* font-family: 'Karla', sans-serif; */
-  margin: 3% 0;
 }
 
 
