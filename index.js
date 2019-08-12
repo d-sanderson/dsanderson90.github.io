@@ -11,7 +11,7 @@ let greetingShort = document.querySelector(".greeting.short");
 let greetingShortStr = document.querySelector(".greeting.short").innerText;
 let greetingShortArr = greetingShortStr.split('')
 let output = greetingShortArr.map( (el, i) => {
-  el = `<span class='ltr'>${el}</span>`
+  el = `<span style='color: ${getRandomColor()}'>${el}</span>`
   return el;
 })
 greetingShort.innerHTML = output.join('');
@@ -144,4 +144,5 @@ function consoleText(words, id, colors) {
     }
   }, 400)
 }
+
 
