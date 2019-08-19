@@ -53,6 +53,16 @@ nav#navbar > div.links > a {
   text-decoration: none;
 }
 
+.link:hover {
+    transform: scale(1.25);
+    margin: 0 30px;
+    transition: .5s ease-in;
+}
+
+.link:not( :hover ){
+  transition: .5s ease-out;
+ }
+
 section {
   flex:1 1 auto;
   display: flex;
@@ -110,6 +120,8 @@ section#welcome-section > div {
   color: gray;
   transition: color 0.3s ease-out;
 }
+
+
 
 img {
  border-radius: 10% 10% 10% 10%;
