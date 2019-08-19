@@ -2,7 +2,7 @@ let greeting = document.querySelector(".greeting")
 let greetingStr = document.querySelector(".greeting").innerText;
 let greetingArr = greetingStr.split('');
 let output0 = greetingArr.map( (el, i) => {
-  el = `<span style='color: ${getRandomColor()}'>${el}</span>`
+  el = `<span class="ltr" style='color: ${getRandomColor()}'>${el}</span>`
   return el;
 })
 greeting.innerHTML = output0.join('');
@@ -11,7 +11,7 @@ let greetingShort = document.querySelector(".greeting.short");
 let greetingShortStr = document.querySelector(".greeting.short").innerText;
 let greetingShortArr = greetingShortStr.split('')
 let output = greetingShortArr.map( (el, i) => {
-  el = `<span style='color: ${getRandomColor()}'>${el}</span>`
+  el = `<span class="ltr"style='color: ${getRandomColor()}'>${el}</span>`
   return el;
 })
 greetingShort.innerHTML = output.join('');
@@ -77,9 +77,9 @@ function getRandomColor() {
 
 // SOCIAL MEDIA ICONS EVENT LISTENERS
 
-let links = document.querySelectorAll('.link, .project-title').forEach(element => {
+let links = document.querySelectorAll('.link, .project-title, .ltr, .up, .down').forEach(element => {
   element.addEventListener('mouseover', function() {
-    element.style.color = getRandomColor()
+    element.style.color = getRandomColor();
   });
   element.addEventListener('mouseout', function() {
     element.style.color = '';
