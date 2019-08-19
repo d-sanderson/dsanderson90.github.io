@@ -77,7 +77,7 @@ function getRandomColor() {
 
 // SOCIAL MEDIA ICONS EVENT LISTENERS
 
-let links = document.querySelectorAll('.link').forEach(element => {
+let links = document.querySelectorAll('.link, .project-title').forEach(element => {
   element.addEventListener('mouseover', function() {
     element.style.color = getRandomColor()
   });
