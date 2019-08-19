@@ -75,17 +75,19 @@ function getRandomColor() {
   return color;
 }
 
+// SOCIAL MEDIA ICONS EVENT LISTENERS
 
+let links = document.querySelectorAll('.link').forEach(element => {
+  element.addEventListener('mouseover', function() {
+    element.style.color = getRandomColor()
+  });
+  element.addEventListener('mouseout', function() {
+    element.style.color = 'white';
+  });
+});
 
-// setTimeout(function () {spans.forEach(span => setInterval( () => {
-//   span.style.color = getRandomColor()
-// ,20000}))}, 5000);
+// CONTACT SECTION ANIMATION
 
-// CSS Animation of the project
-//inserts spans and class of either up or down on each letter for
-
-
-// function([string1, string2],target id,[color1,color2])
 consoleText(['Contact Me.', 'Get In Touch.', 'Let\'s build something.', 'Hire me!'], 'text',[getRandomColor(), getRandomColor(), getRandomColor()]);
 
 function consoleText(words, id, colors) {
