@@ -82,7 +82,7 @@ let links = document.querySelectorAll('.link, .project-title').forEach(element =
     element.style.color = getRandomColor()
   });
   element.addEventListener('mouseout', function() {
-    element.style.color = 'white';
+    element.style.color = '';
   });
 });
 
