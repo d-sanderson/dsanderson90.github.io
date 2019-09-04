@@ -45,12 +45,12 @@ let output4 = projectTaglineArr.map( (el, i) => {
 })
 projectTagline.innerHTML = output4.join('')
 
-function toggleDarkLight() {
+const toggleDarkLight = () => {
   const body = document.getElementById("body");
   let currentClass = body.className;
   body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
 }
-document.getElementById('toggle').addEventListener('click', function() {
+document.getElementById('toggle').addEventListener('click', () => {
   toggleDarkLight();
   document.getElementById('lol').style.color = getRandomColor();
 
@@ -67,30 +67,24 @@ let output3 = contactShortArr.map ( (el, i) => {
 contactTitleShort.innerHTML = output3.join('')
 
 function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
+  let colors = ['#FF355E', '#FD5B78', '#0066FF', '#FF6037', '#FF9933', '#FFCC33', '#FFFF66', '#CCFF00', '#66FF66', '#AAF0D1', '#50BFE6', '#FF6EFF', '#EE34D2']
+  return colors[Math.floor(Math.random() * colors.length)];
 }
 
 // SOCIAL MEDIA ICONS EVENT LISTENERS
 
-let links = document.querySelectorAll('.link, .project-title, .ltr, .up, .down').forEach(element => {
-  element.addEventListener('mouseover', function() {
+let links = document.querySelectorAll('.link, .project-title, .up, .down').forEach(element => {
+  element.addEventListener('mouseover', () => {
     element.style.color = getRandomColor();
   });
-  element.addEventListener('mouseout', function() {
+  element.addEventListener('mouseout', () => {
     element.style.color = '';
   });
 });
 
 // CONTACT SECTION ANIMATION
 
-consoleText(['Contact Me.', 'Get In Touch.', 'Let\'s build something.', 'Hire me!'], 'text',[getRandomColor(), getRandomColor(), getRandomColor()]);
-
-function consoleText(words, id, colors) {
+const consoleText = (words, id, colors) => {
   if (colors === undefined) colors = ['#fff'];
   let visible = true;
   let con = document.getElementById('console');
@@ -138,3 +132,5 @@ function consoleText(words, id, colors) {
     }
   }, 400)
 }
+consoleText(['Contact Me.', 'Get In Touch.', 'Let\'s build something.', 'Hire me!'], 'text',[getRandomColor(), getRandomColor(), getRandomColor()]);
+
