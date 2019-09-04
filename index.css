@@ -53,9 +53,12 @@ nav#navbar > div.links > a {
   text-decoration: none;
 }
 
+.link {
+  margin: 0 15px;
+}
+
 .link:hover {
     transform: scale(1.25);
-    margin: 0 30px;
     transition: .5s ease-in;
 }
 
