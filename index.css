@@ -28,7 +28,7 @@ body.light-mode button {
   background-color: #111;
   color: #eee;
 }
-body.light-mode h1{
+body.light-mode h1, .console-container{
   text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
