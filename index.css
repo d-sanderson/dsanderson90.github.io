@@ -65,7 +65,7 @@ nav#navbar > div.links > a {
   margin: 0 15px;
 }
 
-.link:hover {
+.link:hover, .project-title {
     transform: scale(1.25);
     transition: .5s ease-in;
 }
