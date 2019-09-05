@@ -1,6 +1,7 @@
 let greeting = document.querySelector(".greeting")
 let greetingStr = document.querySelector(".greeting").innerText;
 let greetingArr = greetingStr.split('');
+let colors = ['#FF355E', '#FD5B78', '#0066FF', '#FF6037', '#FF9933', '#FFCC33', '#FFFF66', '#CCFF00', '#66FF66', '#AAF0D1', '#50BFE6', '#FF6EFF', '#EE34D2']
 let output0 = greetingArr.map( (el, i) => {
   el = `<span class="ltr" style='color: ${getRandomColor()}'>${el}</span>`
   return el;
@@ -67,7 +68,7 @@ let output3 = contactShortArr.map ( (el, i) => {
 contactTitleShort.innerHTML = output3.join('')
 
 function getRandomColor() {
-  let colors = ['#FF355E', '#FD5B78', '#0066FF', '#FF6037', '#FF9933', '#FFCC33', '#FFFF66', '#CCFF00', '#66FF66', '#AAF0D1', '#50BFE6', '#FF6EFF', '#EE34D2']
+
   return colors[Math.floor(Math.random() * colors.length)];
 }
 

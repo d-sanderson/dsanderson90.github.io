@@ -28,7 +28,7 @@ body.light-mode button {
   background-color: #111;
   color: #eee;
 }
-body.light-mode h1, .console-container{
+body.light-mode h1, .console-container {
   text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
@@ -197,11 +197,12 @@ img {
 
 
 
-.up {
+/* .up {
   animation: MoveUpDown 1s linear infinite;
   position: relative;
   left: 0;
   bottom: 0;
+  margin: 0 1.5px;
 }
 
 .down {
@@ -209,7 +210,9 @@ img {
   position: relative;
   left: 0;
   bottom: 0;
-}
+  margin: 0 1.5px;
+} */
+
 
 .hidden {
   opacity:0;
@@ -234,7 +237,7 @@ img {
   left:10px;
 }
 
-@keyframes MoveUpDown {
+/* @keyframes MoveUpDown {
   0%, 100% {
     bottom: 0;
   }
@@ -257,4 +260,4 @@ img {
   75% {
     top: -5px
   }
-}
+} */
