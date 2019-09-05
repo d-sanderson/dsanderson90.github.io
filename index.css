@@ -65,12 +65,12 @@ nav#navbar > div.links > a {
   margin: 0 15px;
 }
 
-.link:hover, .project-title {
+.link:hover {
     transform: scale(1.25);
     transition: .5s ease-in;
 }
 
-.link:not( :hover ){
+.link:not( :hover ), .project-title {
   transition: .5s ease-out;
  }
 
