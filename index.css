@@ -70,7 +70,7 @@ nav#navbar > div.links > a {
     transition: .5s ease-in;
 }
 
-.link:not( :hover ), .project-title {
+.link:not( :hover ), .project-title, #tagline {
   transition: .5s ease-out;
  }
 
