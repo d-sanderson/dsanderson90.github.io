@@ -1,7 +1,28 @@
+
+// let dataset;
+// fetch('https://api.github.com/users/dsanderson90')
+//     .then(response => response.json())
+//     .then(data => {
+//  	dataset = data;
+//         populateData();
+// });
+
+// function populateData () {
+//   let container = document.querySelector('.stats');
+//   for(let prop in dataset) {
+//     let stat = document.createElement('div');
+//     stat.className = 'stat'
+//     stat.innerText = `${prop} ${dataset[prop]}`;
+//     container.appendChild(stat);
+//   }
+
+// }
+
 let greeting = document.querySelector(".greeting")
 let greetingStr = document.querySelector(".greeting").innerText;
 let greetingArr = greetingStr.split('');
-let colors = ['#FF355E', '#FD5B78', '#0066FF', '#FF6037', '#FF9933', '#FFCC33', '#FFFF66', '#CCFF00', '#66FF66', '#AAF0D1', '#50BFE6', '#FF6EFF', '#EE34D2']
+// let colors = ['#FF355E', '#FD5B78', '#0066FF', '#FF6037', '#FF9933', '#FFCC33', '#FFFF66', '#CCFF00', '#66FF66', '#AAF0D1', '#50BFE6', '#FF6EFF', '#EE34D2']
+let colors = ['orange', 'yellow', 'lime']
 let output0 = greetingArr.map( (el, i) => {
   el = `<span class="ltr" style='color: ${getRandomColor()}'>${el}</span>`
   return el;
