@@ -2,6 +2,21 @@
 body {
   margin: 0;
   font-family: 'Lexend Deca', sans-serif;
+  min-width: 350px;
+}
+
+img {
+  border-radius: 10% 10% 10% 10%;
+ }
+
+section {
+  flex:1 1 auto;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Lexend Exa'
 }
 
 body.dark-mode {
@@ -37,10 +52,10 @@ body.light-mode h1, .console-container {
 }
 
 nav#navbar {
-  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
+  display: block;
 }
 
 nav#navbar > div.links{
@@ -74,11 +89,6 @@ nav#navbar > div.links > a {
   transition: .5s ease-out;
  }
 
-section {
-  flex:1 1 auto;
-  display: flex;
-}
-
 section#welcome-section, section#contact-section {
   flex-direction: column;
   justify-content: center;
@@ -86,10 +96,6 @@ section#welcome-section, section#contact-section {
 
 }
 
-a {
-  text-decoration: none;
-  font-family: 'Lexend Exa'
-}
 
 #welcome-section > .greeting {
   margin-top: 10%;
@@ -132,11 +138,6 @@ section#welcome-section > div {
   transition: color 0.3s ease-out;
 }
 
-
-
-img {
- border-radius: 10% 10% 10% 10%;
-}
 
 @media (min-width: 566px) and (max-width: 1024px) {
   .projects-tagline.short, .greeting.short, .contact-title.short {
@@ -194,26 +195,6 @@ img {
   }
 }
 
-
-
-
-/* .up {
-  animation: MoveUpDown 1s linear infinite;
-  position: relative;
-  left: 0;
-  bottom: 0;
-  margin: 0 1.5px;
-}
-
-.down {
-  animation: MoveDownUp 1s linear infinite;
-  position: relative;
-  left: 0;
-  bottom: 0;
-  margin: 0 1.5px;
-} */
-
-
 .hidden {
   opacity:0;
 }
@@ -236,28 +217,3 @@ img {
   top:-0.14em;
   left:10px;
 }
-
-/* @keyframes MoveUpDown {
-  0%, 100% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 5px;
-
-  }
-  75% {
-    bottom: -5px
-  }
-}
-
-@keyframes MoveDownUp {
-  0%, 100% {
-    top: 0;
-  }
-  50% {
-    top: 5px;
-  }
-  75% {
-    top: -5px
-  }
-} */
