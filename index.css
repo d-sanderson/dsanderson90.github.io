@@ -2,7 +2,6 @@
 body {
   margin: 0;
   font-family: 'Lexend Deca', sans-serif;
-  min-width: 326px;
 }
 
 img {
@@ -168,6 +167,7 @@ section#welcome-section > div {
 }
 
 @media (min-width: 0px) and (max-width: 565px) {
+
   .project-title {
     margin: 10% 0;
     font-size: 1.3rem;
@@ -186,7 +186,7 @@ section#welcome-section > div {
     display: none;
   }
 
-  navbar, div.console-container {
+  div.console-container {
    display: none;
   }
 
@@ -200,7 +200,7 @@ section#welcome-section > div {
 }
 .console-container {
 
-  font-size:4em;
+  font-size:4rem;
   text-align:center;
   height:200px;
   width:600px;
@@ -216,4 +216,12 @@ section#welcome-section > div {
   position:relative;
   top:-0.14em;
   left:10px;
+}
+
+
+@media (min-width: 0px) and (max-width: 320px) {
+
+  .link {
+    font-size: 1rem;
+  }
 }
