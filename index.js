@@ -21,7 +21,7 @@ let greeting = document.querySelector('.greeting');
 let greetingStr = document.querySelector('.greeting').innerText;
 let greetingArr = greetingStr.split('');
 // let colors = ['#FF355E', '#FD5B78', '#0066FF', '#FF6037', '#FF9933', '#FFCC33', '#FFFF66', '#CCFF00', '#66FF66', '#AAF0D1', '#50BFE6', '#FF6EFF', '#EE34D2']
-let colors = ['orange', 'yellow', 'lime'];
+let colors = ['#f75f1c', '#ff9a00', '#881ee4', '#85e21f'];
 let letters = greetingArr.map((el, i) => {
   el = `<span class="ltr" style='color: ${getRandomColor()}'>${el}</span>`;
   return el;
