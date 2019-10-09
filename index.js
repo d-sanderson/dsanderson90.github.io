@@ -1,9 +1,10 @@
+//  GITHUB USERDATA FETCH
 // let dataset;
 // fetch('https://api.github.com/users/dsanderson90')
 //     .then(response => response.json())
 //     .then(data => {
 //  	dataset = data;
-//         populateData();
+//   populateData();
 // });
 
 // function populateData () {
@@ -89,11 +90,25 @@ function getRandomColor() {
 let links = document
   .querySelectorAll('.link, .project-title')
   .forEach(element => {
+    if(element.className == 'project-title') {
+      element.addEventListener('mouseover', () => {
+        element.style.color = getRandomColor();
+        element.style.fontSize = '2.5rem'
+      });
+      element.addEventListener('mouseout', () => {
+        element.style.color = '';
+        element.style.fontSize = ''
+
+      });
+    }
+    
     element.addEventListener('mouseover', () => {
       element.style.color = getRandomColor();
+
     });
     element.addEventListener('mouseout', () => {
       element.style.color = '';
+
     });
   });
 
@@ -104,11 +119,13 @@ imgs.forEach(img => {
     let projectHeadline =
       e.target.parentNode.previousElementSibling.childNodes[1];
     projectHeadline.style.color = getRandomColor();
+    projectHeadline.style.fontSize = '2.5rem'
   });
   img.addEventListener('mouseout', e => {
     let projectHeadline =
       e.target.parentNode.previousElementSibling.childNodes[1];
     projectHeadline.style.color = '';
+    projectHeadline.style.fontSize = '';
   });
 });
 
