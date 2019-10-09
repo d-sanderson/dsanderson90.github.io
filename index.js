@@ -22,46 +22,53 @@ let greetingStr = document.querySelector('.greeting').innerText;
 let greetingArr = greetingStr.split('');
 // let colors = ['#FF355E', '#FD5B78', '#0066FF', '#FF6037', '#FF9933', '#FFCC33', '#FFFF66', '#CCFF00', '#66FF66', '#AAF0D1', '#50BFE6', '#FF6EFF', '#EE34D2']
 let colors = ['orange', 'yellow', 'lime'];
-let output0 = greetingArr.map((el, i) => {
+let letters = greetingArr.map((el, i) => {
   el = `<span class="ltr" style='color: ${getRandomColor()}'>${el}</span>`;
   return el;
 });
-greeting.innerHTML = output0.join('');
+greeting.innerHTML = letters.join('');
 
 let greetingShort = document.querySelector('.greeting.short');
 let greetingShortStr = document.querySelector('.greeting.short').innerText;
 let greetingShortArr = greetingShortStr.split('');
-let output = greetingShortArr.map((el, i) => {
+let lettersShort = greetingShortArr.map((el, i) => {
   el = `<span class="ltr"style='color: ${getRandomColor()}'>${el}</span>`;
   return el;
 });
-greetingShort.innerHTML = output.join('');
+greetingShort.innerHTML = lettersShort.join('');
 
 let projectsTaglineShort = document.querySelector('.projects-tagline.short');
 let projectsTaglineShortStr = projectsTaglineShort.innerText;
 let projectsTaglineShortArr = projectsTaglineShortStr.split('');
-let output2 = projectsTaglineShortArr.map((el, i) => {
-  if (i % 2 == 0) {
-    el = `<span class="up" style='color: ${getRandomColor()}'>${el}</span>`;
-  } else {
-    el = `<span class="down" style='color: ${getRandomColor()}'>${el}</span>`;
-  }
-  return el;
+let projectLettersShort = projectsTaglineShortArr.map((el, i) => {
+  return (i % 2 == 0) ?
+    el = `<span style='color: ${getRandomColor()}'>${el}</span>` :
+    el = `<span style='color: ${getRandomColor()}'>${el}</span>`
+
 });
-projectsTaglineShort.innerHTML = output2.join('');
+projectsTaglineShort.innerHTML = projectLettersShort.join('');
 
 let projectTagline = document.querySelector('.projects-tagline');
 let projectTaglineStr = document.querySelector('.projects-tagline').innerText;
 let projectTaglineArr = projectTaglineStr.split('');
-let output4 = projectTaglineArr.map((el, i) => {
+let projectLetters = projectTaglineArr.map((el, i) => {
   if (i % 2 == 0) {
-    el = `<span class="up" style='color: ${getRandomColor()}'>${el}</span>`;
+    el = `<span style='color: ${getRandomColor()}'>${el}</span>`;
   } else {
-    el = `<span class="down" style='color: ${getRandomColor()}'>${el}</span>`;
+    el = `<span style='color: ${getRandomColor()}'>${el}</span>`;
   }
   return el;
 });
-projectTagline.innerHTML = output4.join('');
+projectTagline.innerHTML = projectLetters.join('');
+
+let contactTitleShort = document.querySelector('.contact-title.short');
+let contactTitleShortStr = contactTitleShort.innerText;
+let contactShortArr = contactTitleShortStr.split('');
+let contactLetterShort = contactShortArr.map((el, i) => {
+  el = `<span style='color: ${getRandomColor()}'>${el}</span>`;
+  return el;
+});
+contactTitleShort.innerHTML = contactLetterShort.join('');
 
 const toggleDarkLight = () => {
   const body = document.getElementById('body');
@@ -73,23 +80,14 @@ document.getElementById('toggle').addEventListener('click', () => {
   document.getElementById('lol').style.color = getRandomColor();
 });
 
-let contactTitleShort = document.querySelector('.contact-title.short');
-let contactTitleShortStr = contactTitleShort.innerText;
-let contactShortArr = contactTitleShortStr.split('');
-let output3 = contactShortArr.map((el, i) => {
-  el = `<span class="down" style='color: ${getRandomColor()}'>${el}</span>`;
-  return el;
-});
-contactTitleShort.innerHTML = output3.join('');
-
 function getRandomColor() {
   return colors[Math.floor(Math.random() * colors.length)];
 }
 
-// SOCIAL MEDIA ICONS EVENT LISTENERS
+// Event listeners for hover effects
 
 let links = document
-  .querySelectorAll('.link, .project-title, .up, .down')
+  .querySelectorAll('.link, .project-title')
   .forEach(element => {
     element.addEventListener('mouseover', () => {
       element.style.color = getRandomColor();
@@ -101,17 +99,18 @@ let links = document
 
 let imgs = document.querySelectorAll('img');
 imgs.forEach(img => {
-   img.addEventListener('mouseover', e => {
+  img.addEventListener('mouseover', e => {
     //selects project headline from the DOM
-    let projectHeadline = e.target.parentNode.previousElementSibling.childNodes[1];
+    let projectHeadline =
+      e.target.parentNode.previousElementSibling.childNodes[1];
     projectHeadline.style.color = getRandomColor();
   });
   img.addEventListener('mouseout', e => {
-    let projectHeadline = e.target.parentNode.previousElementSibling.childNodes[1];
+    let projectHeadline =
+      e.target.parentNode.previousElementSibling.childNodes[1];
     projectHeadline.style.color = '';
   });
 });
-
 
 // CONTACT SECTION ANIMATION
 
@@ -166,4 +165,3 @@ consoleText(
   'text',
   [getRandomColor(), getRandomColor(), getRandomColor()]
 );
-
