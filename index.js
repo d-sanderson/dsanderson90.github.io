@@ -103,12 +103,12 @@ let imgs = document.querySelectorAll('img');
 imgs.forEach(img => {
    img.addEventListener('mouseover', e => {
     //selects project headline from the DOM
-    let projectText = e.target.parentNode.previousElementSibling.childNodes[1];
-    projectText.style.color = getRandomColor();
+    let projectHeadline = e.target.parentNode.previousElementSibling.childNodes[1];
+    projectHeadline.style.color = getRandomColor();
   });
   img.addEventListener('mouseout', e => {
-    let projectText = e.target.parentNode.previousElementSibling.childNodes[1];
-    projectText.style.color = '';
+    let projectHeadline = e.target.parentNode.previousElementSibling.childNodes[1];
+    projectHeadline.style.color = '';
   });
 });
 
