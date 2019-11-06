@@ -24,7 +24,7 @@ let greetingArr = greetingStr.split('');
 // let colors = ['#FF355E', '#FD5B78', '#0066FF', '#FF6037', '#FF9933', '#FFCC33', '#FFFF66', '#CCFF00', '#66FF66', '#AAF0D1', '#50BFE6', '#FF6EFF', '#EE34D2']
 let colors = ['#f75f1c', '#ff9a00', '#881ee4', '#85e21f'];
 let letters = greetingArr.map((el, i) => {
-  el = `<span class="ltr" style='color: ${getRandomColor()}'>${el}</span>`;
+  el = `<span class="ltr">${el}</span>`;
   return el;
 });
 greeting.innerHTML = letters.join('');
@@ -33,7 +33,7 @@ let greetingShort = document.querySelector('.greeting.short');
 let greetingShortStr = document.querySelector('.greeting.short').innerText;
 let greetingShortArr = greetingShortStr.split('');
 let lettersShort = greetingShortArr.map((el, i) => {
-  el = `<span class="ltr"style='color: ${getRandomColor()}'>${el}</span>`;
+  el = `<span class="ltr">${el}</span>`;
   return el;
 });
 greetingShort.innerHTML = lettersShort.join('');
@@ -43,8 +43,8 @@ let projectsTaglineShortStr = projectsTaglineShort.innerText;
 let projectsTaglineShortArr = projectsTaglineShortStr.split('');
 let projectLettersShort = projectsTaglineShortArr.map((el, i) => {
   return (i % 2 == 0) ?
-    el = `<span style='color: ${getRandomColor()}'>${el}</span>` :
-    el = `<span style='color: ${getRandomColor()}'>${el}</span>`
+    el = `<span>${el}</span>` :
+    el = `<span>${el}</span>`
 
 });
 projectsTaglineShort.innerHTML = projectLettersShort.join('');
@@ -54,9 +54,9 @@ let projectTaglineStr = document.querySelector('.projects-tagline').innerText;
 let projectTaglineArr = projectTaglineStr.split('');
 let projectLetters = projectTaglineArr.map((el, i) => {
   if (i % 2 == 0) {
-    el = `<span style='color: ${getRandomColor()}'>${el}</span>`;
+    el = `<span>${el}</span>`;
   } else {
-    el = `<span style='color: ${getRandomColor()}'>${el}</span>`;
+    el = `<span>${el}</span>`;
   }
   return el;
 });
@@ -66,7 +66,7 @@ let contactTitleShort = document.querySelector('.contact-title.short');
 let contactTitleShortStr = contactTitleShort.innerText;
 let contactShortArr = contactTitleShortStr.split('');
 let contactLetterShort = contactShortArr.map((el, i) => {
-  el = `<span style='color: ${getRandomColor()}'>${el}</span>`;
+  el = `<span>${el}</span>`;
   return el;
 });
 contactTitleShort.innerHTML = contactLetterShort.join('');
@@ -101,7 +101,7 @@ let links = document
 
       });
     }
-    
+
     element.addEventListener('mouseover', () => {
       element.style.color = getRandomColor();
 
